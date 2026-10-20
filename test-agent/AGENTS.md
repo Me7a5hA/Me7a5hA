@@ -14,7 +14,23 @@ bdk eval --dir .
 npm run check
 ```
 
-Run the CLI under Node, never Bun.
+Run the CLI under Node, never Bun. Node 22.13+ is required (`@cursor/bdk`).
+
+## Cloud Agent
+
+Work in `test-agent/`, not the git root. Dependencies install with `npm ci` from this directory.
+
+On boot the dev server is already started:
+
+```bash
+./node_modules/.bin/bdk dev --dir . --host 127.0.0.1 --port 3000
+```
+
+- Home: http://127.0.0.1:3000/
+- Playground: http://127.0.0.1:3000/test-agent/playground
+- Health: http://127.0.0.1:3000/v1/health
+
+`validate`, `info`, and `call` do not need a model credential. `run`, `eval` (other than `--list`), and playground turns need `CURSOR_API_KEY`.
 
 ## Layout
 
