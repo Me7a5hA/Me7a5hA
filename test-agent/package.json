@@ -1,0 +1,23 @@
+{
+  "name": "test-agent",
+  "private": true,
+  "type": "module",
+  "description": "agent project: test-agent",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "validate": "bdk validate --dir .",
+    "info": "bdk info --dir . --json",
+    "call": "bdk call --dir .",
+    "run": "bdk run --dir .",
+    "eval": "bdk eval --dir .",
+    "dev": "bdk dev --dir ."
+  },
+  "dependencies": {
+    "@cursor/bdk": "^0.2.27",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "6.0.3"
+  }
+}
